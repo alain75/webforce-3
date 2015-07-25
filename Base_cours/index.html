@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test AJAX</title>
+	<style>
+		#result {
+			border: 3px dotted #CCC; 
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	
+	<h4>Résultats</h4>
+
+	<div id="result"></div>
+	<br />
+	<button id="btn">GO AJAX</button>
+
+	<input id="kw" />
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+	<script>
+		//console.log("yo");
+
+		//exécute la fonction anonyme à chaque 2 secondes
+		//utile pour faire des vérifications périodiques sur le serveur
+		//genre vérifier s'il y a des nouveautés dans la bdd !
+		window.setInterval(function(){
+			console.log("yo !");
+		}, 2000);
+
+
+		//on met sous écoute l'input #kw pour l'événement de clavier keyup
+		$("#kw").on("keyup", function(){
+
+		//on récupère les mots-clefs tapés par l'interndaute
+		var kw = $("#kw").val();
+
+		//si la chaîne est plus petite que 3 caractères... on vide la div et c'est tout
+		if (kw.length < 3){
+		$("#result").html("");
+		}
+		//sinon, requête AJAX au serveur !
+		else{
+			$.ajax({
+				"url": "http://localhost/ajax/test.php", //url de la requête
+				"data": {
+					"kw": $("#kw").val() //données envoyées en GET
+				}
+			}).done(function(response){ //done() sera appelée lorsque les données seront reçues
+				//injecte les données dans notre div
+				$("#result").html(response);
+
+			});
+			}
+		});
+		/*
+	$("#btn").on("click", function(){
+
+			$.ajax({
+			"url": "http://localhost/ajax/test.php"
+		}).done(function(response){
+
+			//console.log(response);
+			$("#result").html(response);
+		});
+
+	});
+
+		*/
+
+
+	</script>
+
+
+</body>
+</html>

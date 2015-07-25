@@ -1,0 +1,10 @@
+<?php
+	$_SESSION;
+	$_POST
+	$_GET;
+	$_SERVER;
+
+	$_FILLES;
+	$_COOKIES;
+	$_REQUIST;
+?>

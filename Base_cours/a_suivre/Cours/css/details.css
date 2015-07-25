@@ -1,0 +1,19 @@
+body{
+	font: 16px sans-serif;
+}
+.imag{
+	width: 550px;
+	height: 900px;
+	border:solid 1px #000;
+	border-radius: 5px;
+}
+.resume{
+	margin: 0px auto;
+	width: 600px;
+	height:300px;
+	display: block;
+}
+p{
+	margin-right: 80px;
+	border: solid 1px #CC0000;
+}

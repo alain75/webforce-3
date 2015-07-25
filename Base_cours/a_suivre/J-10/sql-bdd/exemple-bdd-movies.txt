@@ -1,0 +1,48 @@
+movies
+	id
+	title
+	year
+	...
+
+genres
+	id
+	name
+
+movies_genres
+	movie_id
+	genre_id
+
+persons
+	id
+	first_name
+	last_name
+	etc.
+
+roles
+	id
+	name
+
+persons_movies
+	movie_id
+	person_id
+	role_id
+
+runtimes
+	id
+	time
+	note
+	movie_id
+
+users
+	id
+	username
+	email
+	etc.
+
+watchlist
+	id
+	user_id
+	movie_id
+	date_added
+	date_modified
+	is_active

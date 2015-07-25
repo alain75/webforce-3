@@ -1,0 +1,150 @@
+﻿j1/
+	php-intro/
+		echo
+		types de variable	
+			chaînes, nombres, booléen, array
+		conditions
+		boucle foreach
+		arithmétique
+		concaténation
+
+	mini-site-php/
+		include()
+		date()
+		introduire du PHP dans un site HTML...
+
+j2/
+	boucles-demo.php
+		for
+		while
+		foreach
+	variable-revision/
+		manipulation de tableaux de base
+	exos/
+		chaines.php
+			fonctions utiles (strlen, explode, strtoupper, etc.)
+		nombres.php
+			arithmétique
+		boucles.php
+			for et foreach
+
+j3/
+	form-intro/
+		petit formulaire, avec validation
+
+	form-livre/
+		gros formulaire, avec validation
+
+j4/
+	colors/
+		affichage en boucle d'un array
+		paramètre d'URL $_GET
+	
+	liens-utiles/
+		affichage en boucle d'un array multidimensionnel
+		paramètre d'URL $_GET
+		intro très rapide aux fonctions PHP
+	
+	trombi/
+		affichage en boucle d'un array
+		paramètre d'URL $_GET
+
+j5/
+	bucketlist.sql
+		intro au langage SQL (voir J6/)
+
+	compta.ods
+		document d'exemple sans grand intérêt
+
+	leboncoin/structure-bdd.txt
+		structure de la base de données du bon coin, incomplet
+
+j6/
+	introduction à SQL (suite)
+	introduction à PDO
+	début du projet bucket list
+
+j7/
+	suite du projet bucket list
+		ajout d'idée en base
+			requête INSERT avec formulaire
+			validation
+		début des votes
+		Sécurité
+			Injection SQL 
+				paramètres nommés et bindValue()
+			Attaques XSS
+				strip_tags()
+				htmlentities()
+
+j8/
+	invites de commande : les bases
+		cd
+		exit
+	composer
+		installation et utilisation
+	fin du projet bucket list
+		système de vote
+		données de test bidon avec faker
+
+j9/
+	correction finale bucketlist
+	début du projet movies
+		requête sql au hasard avec RAND()
+		affichage de données en boucle
+		page détail avec paramètre d'URL
+
+j10/
+	SQL et base de données
+		révision
+		aggrégation
+		type de relations et cardinalité
+	Suite du projet movies
+		extraction des noms de catégorie depuis la bdd
+		filtrage des films par catégorie
+
+j11/
+	exam PHP et MySQL
+	correction exam
+
+j12/
+	git
+		brocoli (projet de test git sans intérêt)
+	ligne de commandes (Dario)
+
+j13/
+	correction examen
+	authentification
+		inscription
+			hashage de mot de passe
+		connexion
+			session
+
+J14/
+	suite du système d'authentification
+		séparation de la config dans un fichier non versionné
+		ajout d'un readme.md
+		amélioration de l'inscription
+			username != email
+			mots réservés pour le username
+			expressions rationnelles
+				uniquement des alphanumériques pour le username
+				au moins une lettre, un chiffre et un caractère spécial
+		suite du login
+			redirections avec messages d'informations
+		page protégée, accessible que pour les utilisateurs connectés
+		navigation
+			salutation de l'utilisateur connecté
+			logout
+		ajout de rôle
+			page protégée pour admin seulement
+
+	envoi d'email avec PHPMailer
+
+	suite encore du système d'auth
+		mot de passe oublié
+			token
+		remember me
+			cookies
+	si on a le temps : 
+		vérification de l'email à l'inscription

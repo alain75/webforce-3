@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test AJAX</title>
+	<style>
+		#result {
+			border: 3px dotted #CCC; 
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h4>Résultats</h4>
+	<div id="result"></div>
+	<br />
+	<button id="btn">GO AJAX</button>
+
+	<input id="kw" />
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		//console.log("yo");
+
+		//exécute la fonction anonyme à chaque 2 secondes
+		//utile pour faire des 
+		window.setInterval(function(){
+			console.log("yo !");
+		}, 2000);
+
+
+		$("#kw").on("keyup", function(){
+			var kw = $("#kw").val();
+			console.log(kw.length);
+
+			if (kw.length < 3){
+				$("#result").html("");
+			}
+			else {
+				$.ajax({
+					"url": "http://localhost/php/j16/ajax/test.php",
+					"data": {
+						"kw": $("#kw").val()
+					}
+				}).done(function(response){
+
+					$("#result").html(response);
+
+				});
+			}
+		});
+
+
+
+		/*
+
+		$("#btn").on("click", function(){
+			$.ajax({
+				"url": "http://localhost/php/j16/ajax/test.php"
+			}).done(function(response){
+
+				$("#result").html(response);
+
+			});
+		});
+
+		*/
+
+		
+
+	</script>
+</body>
+</html>

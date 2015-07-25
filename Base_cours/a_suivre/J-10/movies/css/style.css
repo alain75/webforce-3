@@ -1,0 +1,77 @@
+body, html {
+	width: 100%;
+	background-color: #000;
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	font-weight: normal;
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+}
+
+a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.movie {
+	display: block;
+	width: 160px;
+	height: 240px;
+	line-height: 240px;
+	overflow: hidden;
+	float: left;
+	margin: 5px;
+	text-align: center;
+	background-color: #111;
+	opacity: 0.9;
+	vertical-align: middle;
+	position: relative;
+}
+
+.movie:hover .movie_title {
+	bottom: 0px;
+	transition: 0.5s;
+}
+
+.movie_title {
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+	position: absolute;
+	bottom: -50px;
+	background-color: #FFF;
+	color: #000;
+	font-size: 12px;
+	transition: 0.3s;
+}
+
+.movie:hover {
+	opacity: 1;
+}
+
+.movie img {
+	max-width: 160px;
+}
+
+.more_movies {
+	font-size: 72px;
+}
+
+.poster {
+	max-width: 40%;
+	float: left;
+	margin-right: 20px;
+}
+
+.movie_info {
+	max-width: 50%
+	float: left;
+}

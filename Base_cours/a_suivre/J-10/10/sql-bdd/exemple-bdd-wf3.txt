@@ -1,0 +1,47 @@
+Base de données pour WF3
+
+//les étudiants
+students
+	id
+	session_id  //à quelle session il appartient
+	address_id  //quelle est son adresse
+	first_name
+	last_name
+	etc.
+
+//adresses (pour étudiant, prof et sites)
+address
+	id
+	number
+	street
+	city
+	zip
+	etc.
+
+//contient quelques sites de cours (Nanterre, Paris4, Paris10, etc.)
+sites
+	id
+	name
+	address_id  //quelle est l'adresse du site
+
+//une ligne par promo
+sessions
+	id
+	site_id        //sur quel site était cette promo
+	date_started
+	date_ended
+	etc...
+
+//les profs
+teachers
+	id
+	first_name
+	last_name
+	address_id  //quelle est son adresse
+
+//stocke les relations entre prof et promo
+//une ligne par relation
+//relation many to many
+sessions_teachers
+	session_id  
+	teacher_id
